@@ -1,28 +1,30 @@
-//�ּ�
-//���� ����, �ڵ�� �νĵ��� �ʴ´�
+//주석
+//설명 역할, 코드로 인식되지 않는다
 
 #include <iostream>
 using namespace std;
 
 int main()
 {
-	//�ڷ��� (ũ�� ����, byte)
-	//������ char(1) short(2) int(4) long(4), long long(8)
-	//�Ǽ��� float(4) double(8)
+	//자료형 (크기 단위, byte)
+	//정수형 char(1) short(2) int(4) long(4), long long(8)
+	//실수형 float(4) double(8)
 
 	int i = 0;
 	
-	//1����Ʈ�� ����� ǥ��
-	//256���� 0 - 255
+	//1바이트로 양수만 표현
+	//256가지 0 - 255
 	unsigned char c = 0;
 
-	c = -1; //�޸𸮿��� 2���� 11111111�� ����ȴٴ°���.
+	c = -1; //메모리에는 2진수 11111111이 저장된다는거임.
+			//16진수 0xff는 한 자리에 4비트씩 총 8비트, 0xff == 11111111
 
-	//1����Ʈ�� ���, ���� �Ѵ� ǥ��
+	//1바이트로 양수, 음수 둘다 표현
 	//-128 0 127
 
 	i = 127;
 
 
 	return 0;
+
 }
