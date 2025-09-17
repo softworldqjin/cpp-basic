@@ -1,4 +1,4 @@
-// vector´Â vector¶ó´Â Çì´õ¿¡, std³×ÀÓ½ºÆäÀÌ½º ¾È¿¡, class ÅÛÇÃ¸´ µÇÀÖ´Â°Å´Ù
+// vectorëŠ” vectorë¼ëŠ” í—¤ë”ì—, stdë„¤ì„ìŠ¤í˜ì´ìŠ¤ ì•ˆì—, class í…œí”Œë¦¿ ë˜ì–´ìˆëŠ”ê±°ë‹¤
 // template<typename T>
 // class vector
 // T* 
@@ -15,25 +15,25 @@ using std::vector;
 
 int main()
 {
-	vector<int> vecInt; // vectro<int> ±îÁö°¡ class»ı¼º, »ı¼ºµÆÀ¸´Ï±î vector Å¬·¡½º·Î vecInt ÀÎ½ºÅÏ½º »ı¼º
-						// vecInt ÀÎ½ºÅÏ½º ¾È¿¡´Â Æ¯Á¤ÇÑ ¸î¸îÀÌ intÀÚ·áÇü
+	vector<int> vecInt; // vectro<int> ê¹Œì§€ê°€ classìƒì„±, ìƒì„±ëìœ¼ë‹ˆê¹Œ vector í´ë˜ìŠ¤ë¡œ vecInt ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
+						// vecInt ì¸ìŠ¤í„´ìŠ¤ ì•ˆì—ëŠ” íŠ¹ì •í•œ ëª‡ëª‡ì´ intìë£Œí˜•
 	vecInt.push_back(10);
 	vecInt.push_back(20);
 
-	vecInt[0]; // °°Àº°Å vecInt.at(0); 0¹øÂ°°ªÀ» &·¹ÆÛ·±½º °ªÀ¸·Î ¹İÈ¯
+	vecInt[0]; // ê°™ì€ê±° vecInt.at(0); 0ë²ˆì§¸ê°’ì„ &ë ˆí¼ëŸ°ìŠ¤ ê°’ìœ¼ë¡œ ë°˜í™˜
 	
-	// ¿¬¼ÓµÈ ¸Ş¸ğ¸®ÀÇ Æ÷ÀÎÅÍ ¹İÈ¯
+	// ì—°ì†ëœ ë©”ëª¨ë¦¬ì˜ í¬ì¸í„° ë°˜í™˜
 	int* p = vecInt.data();
 	cout << p[1] << endl;
 
-	// ÇöÀç º¤ÅÍ¿¡ µé¾îÀÖ´Â ¿ø¼Ò °³¼ö ¹İÈ¯
+	// í˜„ì¬ ë²¡í„°ì— ë“¤ì–´ìˆëŠ” ì›ì†Œ ê°œìˆ˜ ë°˜í™˜
 	int k = vecInt.size();
 	
-	// ÀçÇÒ´ç¾øÀÌ ³ÖÀ» ¼ö ÀÖ´Â ÃÖ´ë ¿ø¼Ò °³¼ö ¹İÈ¯
+	// ì¬í• ë‹¹ì—†ì´ ë„£ì„ ìˆ˜ ìˆëŠ” ìµœëŒ€ ì›ì†Œ ê°œìˆ˜ ë°˜í™˜
 	int j = vecInt.capacity();
 
-	for (size_t i = 0; i < vecInt.size(); ++i)	// ¸Ş¸ğ¸® ÇÑÄ­¿¡ 1byte, 64ºñÆ® cpu´Â 8byte¾¿ Á¢±Ù°¡´É
-	{											// ÇÑ¹ø¿¡ Á¢±ÙÇØ¼­ ´õ ºü¸£´Ù.
+	for (size_t i = 0; i < vecInt.size(); ++i)	// ë©”ëª¨ë¦¬ í•œì¹¸ì— 1byte, 64ë¹„íŠ¸ cpuëŠ” 8byteì”© ì ‘ê·¼ê°€ëŠ¥
+	{											// í•œë²ˆì— ì ‘ê·¼í•´ì„œ ë” ë¹ ë¥´ë‹¤.
 		cout << vecInt[i] << endl;
 	}
 
@@ -41,9 +41,10 @@ int main()
 	listInt.push_back(10);
 	listInt.push_front(100);
 
-	// iterator(inner class),, list Å¬·¡½º¾È¿¡ iteratorÅ¬·¡½º°¡ ±¸ÇöµÇ¾îÀÖ´Ù. ±×°É·Î iter°´Ã¼¸¸µê.
-	list<int>::iterator iter = listInt.begin(); // listInt °´Ã¼ ¹İÈ¯...(¾È¿¡ ¿©·¯ ¸â¹öº¯¼ö, ÇÔ¼ö ÀÖ°ÚÁö)
-	int iData = *iter; // operator * () ¿¬»êÀÚ ¿À¹ö·ÎµùµÇÀÖ³×
+	// iterator(inner class),, list í´ë˜ìŠ¤ì•ˆì— iteratorí´ë˜ìŠ¤ê°€ êµ¬í˜„ë˜ì–´ìˆë‹¤. ê·¸ê±¸ë¡œ iterê°ì²´ë§Œë“¦.
+	list<int>::iterator iter = listInt.begin(); // listInt ê°ì²´ ë°˜í™˜...(ì•ˆì— ì—¬ëŸ¬ ë©¤ë²„ë³€ìˆ˜, í•¨ìˆ˜ ìˆê² ì§€)
+	int iData = *iter; // operator * () ì—°ì‚°ì ì˜¤ë²„ë¡œë”©ë˜ìˆë„¤
 
 	return 0;
+
 }
