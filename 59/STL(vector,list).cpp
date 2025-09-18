@@ -37,6 +37,10 @@ int main()
 		cout << vecInt[i] << endl;
 	}
 
+	vector<int>::iterator vector = vecInt.begin();
+	*vector;
+	vector[0] = 100;
+	
 	list<int> listInt;
 	listInt.push_back(10);
 	listInt.push_front(100);
@@ -45,6 +49,14 @@ int main()
 	list<int>::iterator iter = listInt.begin(); // listInt 객체 반환...(안에 여러 멤버변수, 함수 있겠지)
 	int iData = *iter; // operator * () 연산자 오버로딩되있네
 
+	++iter;
+	iter+1; // 안됨,, linked list라서
+
+	for (iter = listInt.begin(); iter != listInt.end(); ++iter) // end()는 리스트의 마지막의 바로 뒤를 가리킴
+		{
+			cout << *iter << endl;
+		}
 	return 0;
 
 }
+
